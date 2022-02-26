@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<robot name="waiter_bot" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<transmission name="RF_W_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="RF_W">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="RF_W_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="LF_W_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="LF_W">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="LF_W_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="LB_W_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="LB_W">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="LB_W_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="RB_w_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="RB_w">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="RB_w_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+</robot>

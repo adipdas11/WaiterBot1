@@ -1,0 +1,23 @@
+waiter_bot_controller:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Position Controllers --------------------------------------
+  RF_W_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: RF_W
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  LF_W_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: LF_W
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  LB_W_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: LB_W
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  RB_w_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: RB_w
+    pid: {p: 100.0, i: 0.01, d: 10.0}

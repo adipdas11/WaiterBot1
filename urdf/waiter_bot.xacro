@@ -1,0 +1,383 @@
+<?xml version="1.0" ?>
+<robot name="waiter_bot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find waiter_bot_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find waiter_bot_description)/urdf/waiter_bot.trans" />
+<xacro:include filename="$(find waiter_bot_description)/urdf/waiter_bot.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.00015850885114610685 8.104493708982607e-06 0.4224690664746022"/>
+    <mass value="82.92733660749995"/>
+    <inertia ixx="12.32713" ixy="-4e-06" ixz="-0.736611" iyy="13.64382" iyz="-8.6e-05" izz="3.690413"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://waiter_bot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://waiter_bot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="RF_wheel_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-1.0849880877281115e-05 0.010620326001437946 2.2832589084698096e-07"/>
+    <mass value="1.3869748359513263"/>
+    <inertia ixx="0.001952" ixy="-0.0" ixz="-0.0" iyy="0.003745" iyz="0.0" izz="0.001951"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.125 0.1777 -0.062699"/>
+    <geometry>
+      <mesh filename="package://waiter_bot_description/meshes/RF_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.125 0.1777 -0.062699"/>
+    <geometry>
+      <mesh filename="package://waiter_bot_description/meshes/RF_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="LF_wheel_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-1.0876810845258933e-05 -0.010620183619669932 3.0815007066864464e-07"/>
+    <mass value="1.386972282070242"/>
+    <inertia ixx="0.001952" ixy="0.0" ixz="-0.0" iyy="0.003745" iyz="-0.0" izz="0.001951"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.125 -0.177708 -0.062699"/>
+    <geometry>
+      <mesh filename="package://waiter_bot_description/meshes/LF_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.125 -0.177708 -0.062699"/>
+    <geometry>
+      <mesh filename="package://waiter_bot_description/meshes/LF_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="LB_wheel_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="1.0528592677860882e-05 -0.010620184231134755 2.884657919616229e-07"/>
+    <mass value="1.3869726779700595"/>
+    <inertia ixx="0.001952" ixy="-0.0" ixz="-0.0" iyy="0.003745" iyz="0.0" izz="0.001951"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.125268 -0.177708 -0.062699"/>
+    <geometry>
+      <mesh filename="package://waiter_bot_description/meshes/LB_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.125268 -0.177708 -0.062699"/>
+    <geometry>
+      <mesh filename="package://waiter_bot_description/meshes/LB_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="RB_wheel_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="1.0585566301235527e-05 0.010620326512925077 1.9632257226842587e-07"/>
+    <mass value="1.3869747655938025"/>
+    <inertia ixx="0.001952" ixy="0.0" ixz="0.0" iyy="0.003745" iyz="-0.0" izz="0.001951"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.125268 0.1777 -0.062699"/>
+    <geometry>
+      <mesh filename="package://waiter_bot_description/meshes/RB_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.125268 0.1777 -0.062699"/>
+    <geometry>
+      <mesh filename="package://waiter_bot_description/meshes/RB_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="castor_b_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-4.887251182084107e-07 2.769780584099054e-07 -0.006282365834419015"/>
+    <mass value="0.09188978524671036"/>
+    <inertia ixx="7e-06" ixy="0.0" ixz="-0.0" iyy="7e-06" iyz="-0.0" izz="1.1e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.240005 0.000217 -0.018152"/>
+    <geometry>
+      <mesh filename="package://waiter_bot_description/meshes/castor_b_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.240005 0.000217 -0.018152"/>
+    <geometry>
+      <mesh filename="package://waiter_bot_description/meshes/castor_b_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="castor_f_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-4.887251182361663e-07 2.769780584182266e-07 -0.006782365834419015"/>
+    <mass value="0.09188978524671036"/>
+    <inertia ixx="7e-06" ixy="0.0" ixz="-0.0" iyy="7e-06" iyz="-0.0" izz="1.1e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.239995 0.000217 -0.018152"/>
+    <geometry>
+      <mesh filename="package://waiter_bot_description/meshes/castor_f_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.239995 0.000217 -0.018152"/>
+    <geometry>
+      <mesh filename="package://waiter_bot_description/meshes/castor_f_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="bottom_camera_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.009135027943883017 0.00035937558131350357 0.010008510128471121"/>
+    <mass value="0.02761517149778078"/>
+    <inertia ixx="3.9e-05" ixy="-0.0" ixz="0.0" iyy="5e-06" iyz="0.0" izz="3.9e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.240953 1.1e-05 -0.147021"/>
+    <geometry>
+      <mesh filename="package://waiter_bot_description/meshes/bottom_camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.240953 1.1e-05 -0.147021"/>
+    <geometry>
+      <mesh filename="package://waiter_bot_description/meshes/bottom_camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="b_lens_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0003294997563826896 4.034308861094136e-07 0.00034740560510687635"/>
+    <mass value="0.00021637150035241193"/>
+    <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="-0.0" izz="0.0"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.258786 1.1e-05 -0.165805"/>
+    <geometry>
+      <mesh filename="package://waiter_bot_description/meshes/b_lens_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.258786 1.1e-05 -0.165805"/>
+    <geometry>
+      <mesh filename="package://waiter_bot_description/meshes/b_lens_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lidar_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.00026087384638012745 -2.2372644981951686e-07 -0.009057087464498459"/>
+    <mass value="0.24958698875333066"/>
+    <inertia ixx="0.000147" ixy="0.0" ixz="1e-06" iyy="0.000145" iyz="0.0" izz="0.000208"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.183375 2.5e-05 -0.211152"/>
+    <geometry>
+      <mesh filename="package://waiter_bot_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.183375 2.5e-05 -0.211152"/>
+    <geometry>
+      <mesh filename="package://waiter_bot_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_camera_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.013546788294130752 0.0003620979990916379 0.00026581855348162264"/>
+    <mass value="0.02761675464418201"/>
+    <inertia ixx="3.9e-05" ixy="0.0" ixz="0.0" iyy="5e-06" iyz="0.0" izz="3.9e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.257516 -4e-06 -1.112152"/>
+    <geometry>
+      <mesh filename="package://waiter_bot_description/meshes/front_camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.257516 -4e-06 -1.112152"/>
+    <geometry>
+      <mesh filename="package://waiter_bot_description/meshes/front_camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="f_lens_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0004791081817097087 6.861266630813075e-08 1.6388644108467076e-07"/>
+    <mass value="0.0002163715003524205"/>
+    <inertia ixx="0.0" ixy="-0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.283416 -4e-06 -1.112152"/>
+    <geometry>
+      <mesh filename="package://waiter_bot_description/meshes/f_lens_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.283416 -4e-06 -1.112152"/>
+    <geometry>
+      <mesh filename="package://waiter_bot_description/meshes/f_lens_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="top_camera_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0005455138788880223 1.5249271259410112e-05 0.011441567129830021"/>
+    <mass value="0.05108071655535039"/>
+    <inertia ixx="7e-06" ixy="-0.0" ixz="-0.0" iyy="2e-05" iyz="0.0" izz="2.2e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.037384 -4e-06 -1.288152"/>
+    <geometry>
+      <mesh filename="package://waiter_bot_description/meshes/top_camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.037384 -4e-06 -1.288152"/>
+    <geometry>
+      <mesh filename="package://waiter_bot_description/meshes/top_camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="t_lens_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-2.260166132826702e-07 6.878043513783974e-08 0.00047207385274705693"/>
+    <mass value="0.00012158891309059741"/>
+    <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.022222 -4e-06 -1.309"/>
+    <geometry>
+      <mesh filename="package://waiter_bot_description/meshes/t_lens_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.022222 -4e-06 -1.309"/>
+    <geometry>
+      <mesh filename="package://waiter_bot_description/meshes/t_lens_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="RF_W" type="continuous">
+  <origin rpy="0 0 0" xyz="0.125 -0.1777 0.062699"/>
+  <parent link="base_link"/>
+  <child link="RF_wheel_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="LF_W" type="continuous">
+  <origin rpy="0 0 0" xyz="0.125 0.177708 0.062699"/>
+  <parent link="base_link"/>
+  <child link="LF_wheel_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="LB_W" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.125268 0.177708 0.062699"/>
+  <parent link="base_link"/>
+  <child link="LB_wheel_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="RB_w" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.125268 -0.1777 0.062699"/>
+  <parent link="base_link"/>
+  <child link="RB_wheel_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="castor1" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.240005 -0.000217 0.018152"/>
+  <parent link="base_link"/>
+  <child link="castor_b_1"/>
+</joint>
+
+<joint name="castor2" type="fixed">
+  <origin rpy="0 0 0" xyz="0.239995 -0.000217 0.018152"/>
+  <parent link="base_link"/>
+  <child link="castor_f_1"/>
+</joint>
+
+<joint name="b_cam" type="fixed">
+  <origin rpy="0 0 0" xyz="0.240953 -1.1e-05 0.147021"/>
+  <parent link="base_link"/>
+  <child link="bottom_camera_1"/>
+</joint>
+
+<joint name="B_lens" type="fixed">
+  <origin rpy="0 0 0" xyz="0.017833 0.0 0.018784"/>
+  <parent link="bottom_camera_1"/>
+  <child link="b_lens_1"/>
+</joint>
+
+<joint name="lidar_j" type="fixed">
+  <origin rpy="0 0 0" xyz="0.183375 -2.5e-05 0.211152"/>
+  <parent link="base_link"/>
+  <child link="lidar_1"/>
+</joint>
+
+<joint name="f_cam" type="fixed">
+  <origin rpy="0 0 0" xyz="0.257516 4e-06 1.112152"/>
+  <parent link="base_link"/>
+  <child link="front_camera_1"/>
+</joint>
+
+<joint name="F_lens" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0259 0.0 0.0"/>
+  <parent link="front_camera_1"/>
+  <child link="f_lens_1"/>
+</joint>
+
+<joint name="t_cam" type="fixed">
+  <origin rpy="0 0 0" xyz="0.037384 4e-06 1.288152"/>
+  <parent link="base_link"/>
+  <child link="top_camera_1"/>
+</joint>
+
+<joint name="T_lens" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.015162 0.0 0.020848"/>
+  <parent link="top_camera_1"/>
+  <child link="t_lens_1"/>
+</joint>
+
+</robot>

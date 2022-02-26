@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+
+<launch>
+
+  <!-- Gmapping -->
+  <include file="$(find waiter_bot_description)/navigation/gmapping_auto.launch"/>
+
+  <!-- move_base mapless-->
+  <include file="$(find waiter_bot_description)/navigation/movebase.launch"/>
+     
+</launch>

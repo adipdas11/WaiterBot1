@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<launch>
+  <arg name="rviz" default="true"/>
+  <arg name="ui" default="true"/>
+
+  <param command="$(find xacro)/xacro $(find waiter_bot_description)/urdf/waiter_bot.xacro" name="robot_description"/>
+  
+  <node args="-param robot_description -urdf -model waiter_bot" name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"/>
+  
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find waiter_bot_description)/world/cafe3.world" />
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+
+   <!-- Required to run rviz -->
+  <group if="$(arg rviz)">
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+    <!-- <node pkg="rviz" type="rviz" name="rviz" args="-d $(find defect_bot_description)/launch/urdf.rviz" required="true"/>  -->
+  </group>
+
+   <!-- Required to run rviz -->
+  <group if="$(arg ui)">
+    <node pkg="waiter_bot_description" type="control_panel.py" name="control_panel"/>
+  </group>
+  
+</launch>

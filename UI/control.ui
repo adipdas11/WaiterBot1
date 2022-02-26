@@ -1,0 +1,1576 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>waiter_bot</class>
+ <widget class="QWidget" name="waiter_bot">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>669</width>
+    <height>808</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Control Pannel</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>10</y>
+     <width>651</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Tibetan Machine Uni</family>
+     <pointsize>20</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="text">
+    <string>RMP Waiter Bot Control</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::RichText</enum>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget_3">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>60</y>
+     <width>171</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <property name="topMargin">
+     <number>9</number>
+    </property>
+    <item>
+     <widget class="QLabel" name="label_2">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>29</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>157</width>
+        <height>23</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Battery Level</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_12">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>74</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>164</width>
+        <height>91</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>0%</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="battery_low">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>165</width>
+        <height>37</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>Battery Low</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>60</y>
+     <width>471</width>
+     <height>741</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Tibetan Machine Uni</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="table_navigation">
+    <attribute name="title">
+     <string>Table Navigation</string>
+    </attribute>
+    <widget class="QWidget" name="gridLayoutWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>0</y>
+       <width>461</width>
+       <height>690</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <property name="verticalSpacing">
+       <number>0</number>
+      </property>
+      <item row="3" column="2">
+       <widget class="QPushButton" name="table6">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>88</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>101</width>
+          <height>92</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>table.png</normaloff>table.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>60</width>
+          <height>60</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0">
+       <widget class="QPushButton" name="table7">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>88</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>101</width>
+          <height>92</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>table.png</normaloff>table.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>60</width>
+          <height>60</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QPushButton" name="table1">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>88</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>101</width>
+          <height>92</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>table.png</normaloff>table.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>60</width>
+          <height>60</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="2">
+       <widget class="QPushButton" name="go_table">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>88</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>101</width>
+          <height>71</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>go.png</normaloff>go.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>70</width>
+          <height>70</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QPushButton" name="table4">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>88</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>101</width>
+          <height>92</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>table.png</normaloff>table.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>60</width>
+          <height>60</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="0">
+       <widget class="QPushButton" name="return_kitchen">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>88</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>101</width>
+          <height>71</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>return.png</normaloff>return.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>60</width>
+          <height>60</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="2">
+       <widget class="QPushButton" name="table9">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>88</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>101</width>
+          <height>92</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>table.png</normaloff>table.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>60</width>
+          <height>60</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QPushButton" name="table3">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>88</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>101</width>
+          <height>92</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>table.png</normaloff>table.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>60</width>
+          <height>60</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="1">
+       <widget class="QPushButton" name="table8">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>88</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>101</width>
+          <height>92</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>table.png</normaloff>table.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>60</width>
+          <height>60</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QPushButton" name="table2">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>88</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>101</width>
+          <height>92</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>table.png</normaloff>table.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>60</width>
+          <height>60</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QPushButton" name="table5">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>88</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>101</width>
+          <height>92</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>table.png</normaloff>table.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>60</width>
+          <height>60</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>23</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>96</width>
+          <height>12</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Table 1</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QLabel" name="label_6">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>23</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>96</width>
+          <height>12</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Table 4</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="2">
+       <widget class="QLabel" name="label_8">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>23</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>96</width>
+          <height>12</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Table 6</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QLabel" name="label_5">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>23</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>96</width>
+          <height>12</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Table 3</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLabel" name="label_4">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>23</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>96</width>
+          <height>12</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Table 2</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1">
+       <widget class="QLabel" name="label_7">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>23</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>96</width>
+          <height>12</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Table 5</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="0">
+       <widget class="QLabel" name="label_9">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>23</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>96</width>
+          <height>12</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Table 7</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="1">
+       <widget class="QLabel" name="label_10">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>23</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>96</width>
+          <height>12</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Table 8</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="2">
+       <widget class="QLabel" name="label_11">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>23</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>96</width>
+          <height>12</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Table 9</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="1">
+       <widget class="QPushButton" name="start_auto_nav">
+        <property name="text">
+         <string>Start</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QComboBox" name="comboBox_5">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>100</width>
+          <height>30</height>
+         </size>
+        </property>
+        <item>
+         <property name="text">
+          <string>Select</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tray 1</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tray 2</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tray 3</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tray 4</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tray 5</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="4" column="2">
+       <widget class="QComboBox" name="comboBox_6">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>100</width>
+          <height>30</height>
+         </size>
+        </property>
+        <item>
+         <property name="text">
+          <string>Select</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tray 1</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tray 2</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tray 3</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tray 4</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tray 5</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QComboBox" name="comboBox_3">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>100</width>
+          <height>30</height>
+         </size>
+        </property>
+        <item>
+         <property name="text">
+          <string>Select</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tray 1</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tray 2</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tray 3</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tray 4</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tray 5</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QComboBox" name="comboBox_4">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>100</width>
+          <height>30</height>
+         </size>
+        </property>
+        <item>
+         <property name="text">
+          <string>Select</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tray 1</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tray 2</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tray 3</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tray 4</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tray 5</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QComboBox" name="comboBox_2">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>100</width>
+          <height>30</height>
+         </size>
+        </property>
+        <item>
+         <property name="text">
+          <string>Select</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tray 1</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tray 2</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tray 3</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tray 4</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tray 5</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QComboBox" name="comboBox">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>100</width>
+          <height>30</height>
+         </size>
+        </property>
+        <item>
+         <property name="text">
+          <string>Select</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tray 1</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tray 2</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tray 3</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tray 4</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tray 5</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="7" column="0">
+       <widget class="QComboBox" name="comboBox_7">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>100</width>
+          <height>30</height>
+         </size>
+        </property>
+        <item>
+         <property name="text">
+          <string>Select</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tray 1</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tray 2</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tray 3</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tray 4</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tray 5</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="7" column="1">
+       <widget class="QComboBox" name="comboBox_8">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>100</width>
+          <height>30</height>
+         </size>
+        </property>
+        <item>
+         <property name="text">
+          <string>Select</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tray 1</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tray 2</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tray 3</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tray 4</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tray 5</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="7" column="2">
+       <widget class="QComboBox" name="comboBox_9">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>100</width>
+          <height>30</height>
+         </size>
+        </property>
+        <item>
+         <property name="text">
+          <string>Select</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tray 1</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tray 2</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tray 3</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tray 4</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tray 5</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="manual_control">
+    <attribute name="title">
+     <string>Manual Control</string>
+    </attribute>
+    <widget class="QWidget" name="gridLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>70</y>
+       <width>461</width>
+       <height>471</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="1">
+       <widget class="QPushButton" name="F">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>102</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>up arrow.png</normaloff>up arrow.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>60</width>
+          <height>60</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="stop">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>102</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>stop.png</normaloff>stop.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>60</width>
+          <height>60</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QPushButton" name="LF">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>102</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>left up.png</normaloff>left up.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>60</width>
+          <height>60</height>
+         </size>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QPushButton" name="B">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>102</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>down arrow.png</normaloff>down arrow.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>60</width>
+          <height>60</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QPushButton" name="RF">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>102</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>right up.png</normaloff>right up.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>60</width>
+          <height>60</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QPushButton" name="LB">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>102</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>right down.png</normaloff>right down.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>60</width>
+          <height>60</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QPushButton" name="RB">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>102</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>left down.png</normaloff>left down.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>60</width>
+          <height>60</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="L">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>102</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>left arrow.png</normaloff>left arrow.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>60</width>
+          <height>60</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QPushButton" name="R">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>102</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>right arrow.png</normaloff>right arrow.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>60</width>
+          <height>60</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="mapping">
+    <attribute name="title">
+     <string>Mapping</string>
+    </attribute>
+    <widget class="QWidget" name="verticalLayoutWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>50</y>
+       <width>291</width>
+       <height>381</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QPushButton" name="manual_map">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Manual</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="autonomous_map">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Autonomous</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="map_view">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Map View / Save</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="emergency_stop">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>300</y>
+     <width>141</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>100</height>
+    </size>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>stop.png</normaloff>stop.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>65</width>
+     <height>65</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>450</y>
+     <width>160</width>
+     <height>211</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="label_13">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>URW Bookman L</family>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Camera View</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="bottom_front_cam">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>62</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>61</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>Bottom Front</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="up_front_cam">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>62</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>61</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>Top Front</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

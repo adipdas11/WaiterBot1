@@ -1,0 +1,294 @@
+<?xml version="1.0" ?>
+<robot name="waiter_bot" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<xacro:property name="body_color" value="Gazebo/DarkGrey" />
+<xacro:property name="wheel" value="Gazebo/FlatBlack" />
+<xacro:property name="camera" value="Gazebo/BlackTransparent" />
+<xacro:property name="lidar" value="Gazebo/Blue" />
+<xacro:property name="castor" value="Gazebo/Grey" />
+<xacro:property name="lens" value="Gazebo/GreyTransparent" />
+
+<gazebo>
+  <plugin filename="libgazebo_ros_control.so" name="control"/>
+</gazebo>
+<gazebo reference="base_link">
+  <material>${body_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+  <gravity>true</gravity>
+</gazebo>
+
+<gazebo reference="RF_wheel_1">
+  <material>${wheel}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="LF_wheel_1">
+  <material>${wheel}</material>
+  <mu1>0.2</mu1>
+  <mu2>.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="LB_wheel_1">
+  <material>${wheel}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="RB_wheel_1">
+  <material>${wheel}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="castor_b_1">
+  <material>${castor}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="castor_f_1">
+  <material>${castor}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="bottom_camera_1">
+  <material>${camera}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="b_lens_1">
+  <material>${lens}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="lidar_1">
+  <material>${lidar}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="front_camera_1">
+  <material>${camera}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="f_lens_1">
+  <material>${lens}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="top_camera_1">
+  <material>${camera}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="t_lens_1">
+  <material>${lens}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<!-- ********** SKID STEER DRIVE PLUGIN ********** -->
+<gazebo>
+  <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
+    <updateRate>100.0</updateRate>
+    <robotNamespace>/</robotNamespace>
+    <leftFrontJoint>LF_W</leftFrontJoint>
+    <rightFrontJoint>RF_W</rightFrontJoint>
+    <leftRearJoint>LB_W</leftRearJoint>
+    <rightRearJoint>RB_w</rightRearJoint>
+    <wheelSeparation>0.330001</wheelSeparation>
+    <wheelDiameter>0.127</wheelDiameter>
+    <robotBaseFrame>base_link</robotBaseFrame>
+    <torque>10</torque>
+    <topicName>cmd_vel</topicName>
+    <broadcastTF>true</broadcastTF>
+  </plugin>
+</gazebo>
+
+<!-- ******* LIDAR PLUGIN ******** -->
+  <gazebo reference="lidar_1">
+    <sensor type="gpu_ray" name="rplidar_a1">
+      <pose>0 0 0 0 0 0</pose>
+      <visualize>false</visualize>
+      <update_rate>10</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>720</samples>
+            <resolution>1</resolution>
+            <!-- 180 degree left side -->
+            <min_angle>-2.0944</min_angle> 
+            <!-- 180 degree right side -->
+            <max_angle>2.0944</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.10</min>
+          <max>10.0</max>
+          <resolution>0.01</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.01</stddev>
+        </noise>
+      </ray>
+      <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_gpu_laser.so">
+        <topicName>/scan</topicName>
+        <frameName>lidar_1</frameName>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+<!-- *** FRONT DEPTH CAMERA ****** -->
+  <gazebo reference="f_lens_1">
+  <sensor name="camera_1" type="depth">
+    <update_rate>20</update_rate>
+    <camera>
+      <horizontal_fov>1.047198</horizontal_fov>
+      <image>
+        <width>640</width>
+        <height>480</height>
+        <format>R8G8B8</format>
+      </image>
+      <clip>
+        <near>0.05</near>
+        <far>500</far>
+      </clip>
+    </camera>
+        <plugin name="camera_plugin" filename="libgazebo_ros_openni_kinect.so">
+          <baseline>0.2</baseline>
+          <alwaysOn>true</alwaysOn>
+          <!-- Keep this zero, update_rate in the parent <sensor> tag
+            will control the frame rate. -->
+          <updateRate>0.0</updateRate>
+          <cameraName>f_camera</cameraName>
+          <imageTopicName>/f_camera/color/image_raw</imageTopicName>
+          <cameraInfoTopicName>/f_camera/color/camera_info</cameraInfoTopicName>
+          <depthImageTopicName>/f_camera/depth/image_raw</depthImageTopicName>
+          <depthImageCameraInfoTopicName>/f_camera/depth/camera_info</depthImageCameraInfoTopicName>
+          <pointCloudTopicName>/f_camera/depth/points</pointCloudTopicName>
+          <frameName>f_lens_1</frameName>
+          <pointCloudCutoff>0.5</pointCloudCutoff>
+          <pointCloudCutoffMax>3.0</pointCloudCutoffMax>
+          <distortionK1>0</distortionK1>
+          <distortionK2>0</distortionK2>
+          <distortionK3>0</distortionK3>
+          <distortionT1>0</distortionT1>
+          <distortionT2>0</distortionT2>
+          <CxPrime>0</CxPrime>
+          <Cx>0</Cx>
+          <Cy>0</Cy>
+          <focalLength>0</focalLength>
+          <hackBaseline>0</hackBaseline>
+        </plugin>
+  </sensor>
+</gazebo>
+
+<!-- *** BOTTOM DEPTH CAMERA ****** -->
+<gazebo reference="b_lens_1">
+  <sensor name="camera_1" type="depth">
+    <update_rate>20</update_rate>
+    <camera>
+      <horizontal_fov>1.047198</horizontal_fov>
+      <image>
+        <width>640</width>
+        <height>480</height>
+        <format>R8G8B8</format>
+      </image>
+      <clip>
+        <near>0.05</near>
+        <far>500</far>
+      </clip>
+    </camera>
+        <plugin name="camera_plugin" filename="libgazebo_ros_openni_kinect.so">
+          <baseline>0.2</baseline>
+          <alwaysOn>true</alwaysOn>
+          <!-- Keep this zero, update_rate in the parent <sensor> tag
+            will control the frame rate. -->
+          <updateRate>0.0</updateRate>
+          <cameraName>b_camera</cameraName>
+          <imageTopicName>/b_camera/color/image_raw</imageTopicName>
+          <cameraInfoTopicName>/b_camera/color/camera_info</cameraInfoTopicName>
+          <depthImageTopicName>/b_camera/depth/image_raw</depthImageTopicName>
+          <depthImageCameraInfoTopicName>/b_camera/depth/camera_info</depthImageCameraInfoTopicName>
+          <pointCloudTopicName>/b_camera/depth/points</pointCloudTopicName>
+          <frameName>b_lens_1</frameName>
+          <pointCloudCutoff>0.5</pointCloudCutoff>
+          <pointCloudCutoffMax>3.0</pointCloudCutoffMax>
+          <distortionK1>0</distortionK1>
+          <distortionK2>0</distortionK2>
+          <distortionK3>0</distortionK3>
+          <distortionT1>0</distortionT1>
+          <distortionT2>0</distortionT2>
+          <CxPrime>0</CxPrime>
+          <Cx>0</Cx>
+          <Cy>0</Cy>
+          <focalLength>0</focalLength>
+          <hackBaseline>0</hackBaseline>
+        </plugin>
+  </sensor>
+</gazebo>
+
+<!--  Camera plugin -->
+  <gazebo reference="t_lens_1">
+    <sensor type="camera" name="camera1">
+      <update_rate>30.0</update_rate>
+      <camera name="head">
+        <horizontal_fov>1.3962634</horizontal_fov>
+        <image>
+          <width>800</width>
+          <height>800</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.02</near>
+          <far>500</far>
+        </clip>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.007</stddev>
+        </noise>
+      </camera>
+      <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+        <alwaysOn>true</alwaysOn>
+        <updateRate>0.0</updateRate>
+        <cameraName>/t_camera</cameraName>
+        <imageTopicName>image_raw</imageTopicName>
+        <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+        <frameName>t_lens_1</frameName>
+        <hackBaseline>0.07</hackBaseline>
+        <distortionK1>0.0</distortionK1>
+        <distortionK2>0.0</distortionK2>
+        <distortionK3>0.0</distortionK3>
+        <distortionT1>0.0</distortionT1>
+        <distortionT2>0.0</distortionT2>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+</robot>
